@@ -11,7 +11,7 @@ export class Stack<T> implements Iterable<T> {
     }
 
     pop(): T | null {
-        return this._initialData.pop() ?? null
+        return this._initialData.pop() ?? null;
     }
 
     [Symbol.iterator](): Iterator<T> {

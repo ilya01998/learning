@@ -4,10 +4,12 @@
     "lib": [
       "ESNext"
     ],
-    "outDir": "dist",
-    "rootDir": "src",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "allowJs": true,
     "experimentalDecorators": true,
-    "allowImportingTsExtensions": true
-  }
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "dist"]
 }

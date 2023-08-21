@@ -20,4 +20,4 @@ module.exports = {
     'computed-property-spacing': ['error', 'never'],
     'semi': ['error', 'always'],
   },
-}
+};
