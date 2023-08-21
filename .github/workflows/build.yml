@@ -34,6 +34,8 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
+    env:
+      ARTIFACT_ACTION: build-${{ fromJson('package-lock.json').version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -47,9 +49,9 @@ jobs:
       - name: Create artifact
         uses: actions/upload-artifact@v3
         with:
-          name: build
+          name: ${{ env.ARTIFACT_ACTION }}
           path: dist
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: build
+          name: ${{ env.ARTIFACT_ACTION }}
