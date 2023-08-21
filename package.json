@@ -2,13 +2,12 @@
   "name": "ts4",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "./src/index.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   },
   "keywords": [],
   "author": "",
