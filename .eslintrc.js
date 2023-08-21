@@ -18,5 +18,6 @@ module.exports = {
     'object-curly-spacing': ['error', 'never'],
     'array-bracket-spacing': ['error', 'never'],
     'computed-property-spacing': ['error', 'never'],
+    'semi': ['error', 'always'],
   },
 }
