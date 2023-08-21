@@ -35,7 +35,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     env:
-      ARTIFACT_ACTION: build-${{ fromJson('package-lock.json').version }}
+      ARTIFACT_ACTION: build-1
     steps:
       - name: Checkout
         uses: actions/checkout@v3
