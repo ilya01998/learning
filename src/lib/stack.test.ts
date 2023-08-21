@@ -1,3 +1,4 @@
+import 'jest';
 import {Stack} from './stack';
 
 describe('Test stack', () => {

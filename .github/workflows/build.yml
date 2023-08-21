@@ -51,3 +51,5 @@ jobs:
           path: dist
       - name: Download artifact
         uses: actions/download-artifact@v3
+        with:
+          name: build
