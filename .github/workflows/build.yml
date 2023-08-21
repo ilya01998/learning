@@ -12,6 +12,7 @@ jobs:
       - name: Install nodejs dependencies
         run: npm ci
   test:
+    needs: prepare
     runs-on: ubuntu-latest
     steps:
       - name: ESLint check
@@ -19,6 +20,7 @@ jobs:
       - name: Jest unit test
         run: npm run test
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Build application
