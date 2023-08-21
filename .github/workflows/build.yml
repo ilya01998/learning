@@ -12,7 +12,7 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: ~/.npm
           key: node_modules-${{hashFiles('package-lock.json')}}
       - name: Install nodejs dependencies
         run: npm ci
@@ -25,7 +25,7 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: ~/.npm
           key: node_modules-${{hashFiles('package-lock.json')}}
       - name: ESLint check
         run: npm run lint
@@ -40,7 +40,14 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: ~/.npm
           key: node_modules-${{hashFiles('package-lock.json')}}
       - name: Build application
         run: npm run build
+      - name: Create artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: dist
+      - name: Download artifact
+        uses: actions/download-artifact@v3
