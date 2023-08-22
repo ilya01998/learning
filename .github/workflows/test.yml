@@ -3,8 +3,10 @@ on: [ workflow_dispatch ]
 jobs:
   prepare:
     runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ fromJson('package-lock.json').version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Test
-        run: echo ${{ fromJson('package-lock.json').version }}
+        run: echo $VERSION
