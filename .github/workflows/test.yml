@@ -4,7 +4,7 @@ jobs:
   prepare:
     runs-on: ubuntu-latest
     env:
-      VERSION: ${{ fromJson('package-lock.json').version }}
+      VERSION: ${{ fromJson('package.json').version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
